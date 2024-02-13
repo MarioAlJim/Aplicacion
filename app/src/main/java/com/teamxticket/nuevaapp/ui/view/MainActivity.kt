@@ -28,11 +28,6 @@ class MainActivity : AppCompatActivity() {
         viewModel.loadProducts()
     }
 
-    override fun onResume() {
-        super.onResume()
-
-    }
-
     private fun initObservables() {
         viewModel.products.observe(this) { products ->
             val productList : List<Product> = products ?: emptyList()
