@@ -1,4 +1,4 @@
-package com.teamxticket.nuevaapp.ui
+package com.teamxticket.nuevaapp.ui.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,12 +11,12 @@ class ProductAdapter (private val products: List<Product>, val onItemSelected: (
 
     inner class ViewHolder(val binding: ItemProductBinding) : RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding: ItemProductBinding = ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ProductAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentProduct = products[position]
         with(holder.binding) {
             tvName.text = "Nombre: " + currentProduct.title

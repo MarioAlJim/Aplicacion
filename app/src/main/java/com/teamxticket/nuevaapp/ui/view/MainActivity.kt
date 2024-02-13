@@ -1,13 +1,14 @@
-package com.teamxticket.nuevaapp.ui
+package com.teamxticket.nuevaapp.ui.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.teamxticket.nuevaapp.R
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.teamxticket.nuevaapp.data.model.Product
 import com.teamxticket.nuevaapp.databinding.ActivityMainBinding
+import com.teamxticket.nuevaapp.ui.viewModel.MainViewModel
+import com.teamxticket.nuevaapp.ui.view.adapter.ProductAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -19,12 +20,17 @@ class MainActivity : AppCompatActivity() {
         binding.rvProducts.layoutManager = LinearLayoutManager(this)
         setContentView(binding.root)
 
+        initUI()
         initObservables()
+    }
+
+    private fun initUI() {
+        viewModel.loadProducts()
     }
 
     override fun onResume() {
         super.onResume()
-        viewModel.loadProducts()
+
     }
 
     private fun initObservables() {

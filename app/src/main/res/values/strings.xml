@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">NuevaApp</string>
     <string name="products">Productos</string>
+    <string name="todo">TODO</string>
+    <string name="price">Precio: </string>
+    <string name="pName">Nombre: </string>
+    <string name="bReturn">Regresar</string>
 </resources>

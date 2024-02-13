@@ -1,9 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.NuevaApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Base.Theme.NuevaApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="Theme.NuevaApp" parent="Base.Theme.NuevaApp" />
+
+    <style name="cardItems" parent="">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="strokeColor">@color/blue</item>
+    </style>
+
+    <style name="BasicButtonStyle">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+    </style>
 </resources>

@@ -1,4 +1,6 @@
-package com.teamxticket.nuevaapp.data
+package com.teamxticket.nuevaapp.domain
+
+import com.teamxticket.nuevaapp.data.ProductsRepository
 
 class ProductUseCase {
 
